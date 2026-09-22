@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102f35">
+  <meta name="description" content="دعوت‌نامه عروسی نگار و حسین — ۲۲ مهر ۱۴۰۵">
+  <title>عروسی نگار و حسین</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102f35'/%3E%3Cpath d='M32 8 38 25 56 32 38 39 32 56 26 39 8 32 26 25Z' fill='%23c99a55'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23f4ead8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-pattern"></div>
+    <div class="gate-card">
+      <div class="seal" aria-hidden="true"><span>ن</span><i>و</i><span>ح</span></div>
+      <p class="eyebrow">به نام خدایی که نگار را آفرید</p>
+      <h1 id="gate-title"><span id="guest-name">مهمان گرامی</span><br>دعوتید به جشن ما</h1>
+      <p>چهارشنبه، ۲۲ مهر ۱۴۰۵</p>
+      <button class="primary" id="enter-button" type="button">باز کردن دعوت‌نامه</button>
+      <span class="sound-note">با لمس دکمه، موسیقی پخش می‌شود</span>
+    </div>
+  </div>
+
+  <header class="hero" id="top">
+    <img src="assets/seated.jpg" alt="نگار و حسین" fetchpriority="high">
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <p class="guest-line">برای <strong id="hero-guest">مهمان گرامی</strong></p>
+      <p class="eyebrow">آغاز یک زندگی، کنار عزیزترین‌ها</p>
+      <h1>نگار <span>و</span> حسین</h1>
+      <p class="hero-date">چهارشنبه ۲۲ مهر ۱۴۰۵</p>
+      <a class="scroll-cue" href="#invitation" aria-label="مشاهده دعوت‌نامه">↓</a>
+    </div>
+  </header>
+
+  <button class="music-control" id="music-control" type="button" aria-label="توقف موسیقی" aria-pressed="true">
+    <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span id="music-label">موسیقی روشن</span>
+  </button>
+  <audio id="music" loop preload="metadata"><source src="assets/music.mp3" type="audio/mpeg"></audio>
+
+  <main>
+    <section class="invitation section" id="invitation">
+      <div class="ornament" aria-hidden="true">✦</div>
+      <p class="eyebrow">با مهر و افتخار</p>
+      <h2>کنار ما باشید</h2>
+      <p class="lead">پنج سال قصه، خنده و همراهی را به آغاز خانه‌ای مشترک رسانده‌ایم. خوشحال می‌شویم این شب را با حضور گرم شما به خاطره‌ای ماندگار تبدیل کنیم.</p>
+      <p class="signature">نگار و حسین</p>
+    </section>
+
+    <section class="portrait-break">
+      <img src="assets/tehran-old.jpg" alt="تصویر هنری نگار و حسین در تهران قدیم" loading="lazy">
+      <div><span>قصه ما</span><strong>از دیروز<br>تا همیشه</strong></div>
+    </section>
+
+    <section class="schedule section" id="schedule">
+      <p class="eyebrow">برنامه‌ای که مخصوص شماست</p>
+      <h2>زمان جشن</h2>
+      <div class="timeline" id="timeline"></div>
+      <p class="hospitality">به صرف شیرینی و شام</p>
+      <p class="mixed-note">بعد از صرف شام، از ساعت ۲۲:۳۰ جشن‌مان صمیمی‌تر و خانوادگی‌تر ادامه پیدا می‌کند؛ همه در کنار هم می‌رقصیم، شادی می‌کنیم و تا سپیده‌دم خاطره می‌سازیم.</p>
+    </section>
+
+    <section class="countdown section" aria-labelledby="countdown-title">
+      <p class="eyebrow">تا دیدارمان</p>
+      <h2 id="countdown-title">چقدر مانده؟</h2>
+      <div class="countdown-grid" id="countdown">
+        <div><strong data-unit="days">۰</strong><span>روز</span></div>
+        <div><strong data-unit="hours">۰</strong><span>ساعت</span></div>
+        <div><strong data-unit="minutes">۰</strong><span>دقیقه</span></div>
+        <div><strong data-unit="seconds">۰</strong><span>ثانیه</span></div>
+      </div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <p class="eyebrow">چند قاب از ما</p>
+      <h2>گالری خاطره‌ها</h2>
+      <div class="gallery-grid">
+        <figure class="tall"><img src="assets/standing.jpg" alt="نگار و حسین در مراسم" loading="lazy"></figure>
+        <figure><img src="assets/car-selfie.jpg" alt="نگار و حسین در خودرو" loading="lazy"></figure>
+        <figure><img src="assets/seated.jpg" alt="پرتره نگار و حسین" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="location section" id="location">
+      <div class="tile" aria-hidden="true">⌖</div>
+      <p class="eyebrow">میزبان شما هستیم در</p>
+      <h2>باغ تالار قصر لنا</h2>
+      <p>برای باز کردن مسیر، روی دکمه زیر بزنید.</p>
+      <a class="primary" href="https://nshn.ir/2erbvksDPxtXQM" target="_blank" rel="noopener">مسیریابی با نشان</a>
+    </section>
+
+    <section class="rsvp section" id="rsvp">
+      <p class="eyebrow">لطفاً حضور خود را اعلام کنید</p>
+      <h2>در جشن ما حضور دارید؟</h2>
+      <form id="rsvp-form" action="https://formspree.io/f/mzezrgra" method="post">
+        <input type="hidden" name="_subject" value="پاسخ کارت عروسی نگار و حسین">
+        <input type="hidden" name="guest_id" id="guest-id" value="general">
+        <label>نام و نام خانوادگی<input name="name" id="rsvp-name" autocomplete="name" required></label>
+        <fieldset>
+          <legend>پاسخ شما</legend>
+          <label class="choice"><input type="radio" name="attendance" value="yes" required><span>با افتخار می‌آیم</span></label>
+          <label class="choice"><input type="radio" name="attendance" value="no" required><span>متأسفانه نمی‌رسم</span></label>
+        </fieldset>
+        <label>تعداد مهمانان<select name="count" required><option value="1">۱ نفر</option><option value="2">۲ نفر</option><option value="3">۳ نفر</option><option value="4">۴ نفر</option><option value="5">۵ نفر</option></select></label>
+        <label>پیام برای نگار و حسین <textarea name="message" rows="3" maxlength="500" placeholder="اختیاری"></textarea></label>
+        <label class="honey" aria-hidden="true">این قسمت را خالی بگذارید<input name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        <button class="primary" type="submit">ثبت پاسخ</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><div class="seal small" aria-hidden="true"><span>ن</span><i>و</i><span>ح</span></div><p>مهر ۱۴۰۵ · آغاز همیشه ما</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
