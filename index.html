@@ -1,120 +1,76 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#102f35">
-  <meta name="description" content="دعوت‌نامه عروسی نگار و حسین — ۲۲ مهر ۱۴۰۵">
-  <title>عروسی نگار و حسین</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102f35'/%3E%3Cpath d='M32 8 38 25 56 32 38 39 32 56 26 39 8 32 26 25Z' fill='%23c99a55'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23f4ead8'/%3E%3C/svg%3E">
-  <meta name="referrer" content="no-referrer">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <link rel="stylesheet" href="experience.css?v=3">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f6eedf"><meta name="referrer" content="no-referrer"><meta name="description" content="به جشن آغاز زندگی مشترک نگار و حسین دعوتید؛ چهارشنبه ۲۲ مهر ۱۴۰۵، باغ تالار قصر لنا."><title>دعوت‌نامهٔ عاشقانهٔ نگار و حسین</title>
+<link rel="preload" href="assets/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/Gulzar-Regular.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="wedding.css?v=5">
 </head>
-<body>
-  <section class="cover" id="gate" aria-label="کاور دعوت‌نامه نگار و حسین">
-    <div class="cover-art">
-      <img class="cover-photo" src="assets/cover.png" width="941" height="1672" fetchpriority="high" alt="نگار و حسین در مسیر گل‌های سفید و صورتی، با برگ‌های طلایی و پرندگان سفید">
-      <div class="sr-only"><h1>بسم الله الرحمن الرحیم</h1><p>خدایا، به برکت نام اعظمت، با مدد از مولایمان حضرت علی (علیه‌السلام) و با توسل به امام رئوف، سلطان علی بن موسی الرضا (علیه‌السلام)، واسطهٔ خیر و برکت این پیوند، نخستین گام‌های زندگی مشترکمان را با عشق، امید و توکل به تو برمی‌داریم.</p></div>
-      <button id="enter-button" class="heart-button" type="button">همراه ما شوید <span aria-hidden="true">♡</span></button>
-      <div class="flight" id="flight" aria-hidden="true"></div>
-    </div>
-  </section>
-  <div id="card" hidden>
-
-  <header class="hero" id="top">
-    <img src="assets/seated.jpg" alt="نگار و حسین" fetchpriority="high">
-    <div class="hero-shade"></div>
-    <div class="hero-content">
-      <p class="guest-line">برای <strong id="hero-guest">مهمان گرامی</strong></p>
-      <p class="seat-badge" id="invited-label"></p>
-      <p class="eyebrow">آغاز یک زندگی، کنار عزیزترین‌ها</p>
-      <h1>نگار <span>و</span> حسین</h1>
-      <p class="hero-date">چهارشنبه ۲۲ مهر ۱۴۰۵</p>
-      <a class="scroll-cue" href="#invitation" aria-label="مشاهده دعوت‌نامه">↓</a>
-    </div>
-  </header>
-
-
-  <main>
-    <section class="invitation section" id="invitation">
-      <div class="ornament" aria-hidden="true">✦</div>
-      <p class="eyebrow">با مهر و افتخار</p>
-      <h2>کنار ما باشید</h2>
-      <p class="lead">قصهٔ همراهی‌مان به آغاز زندگی مشترک رسیده است. خوشحال می‌شویم این شب را با حضور گرم شما به خاطره‌ای ماندگار تبدیل کنیم.</p>
-      <p class="signature">نگار و حسین</p>
-    </section>
-
-    <section class="portrait-break">
-      <img src="assets/tehran-old.jpg" alt="تصویر هنری نگار و حسین در تهران قدیم" loading="lazy">
-      <div><span>قصه ما</span><strong>از دیروز<br>تا همیشه</strong></div>
-    </section>
-
-    <section class="schedule section" id="schedule">
-      <p class="eyebrow">برنامه‌ای که مخصوص شماست</p>
-      <h2>زمان جشن</h2>
-      <div class="timeline" id="timeline"></div>
-      <p class="hospitality">به صرف شیرینی و شام</p>
-      <p class="mixed-note">به شوق این شادی بزرگ، بعد از صرف شام و از ساعت ۲۲:۳۰، جمع‌مان خانوادگی می‌شود؛ خانم‌ها و آقایان در کنار هم به رقص و پایکوبی می‌پردازند و تا سپیده‌دم، خاطره‌های شیرین می‌سازیم.</p>
-    </section>
-
-    <section class="countdown section" aria-labelledby="countdown-title">
-      <p class="eyebrow">تا دیدارمان</p>
-      <h2 id="countdown-title">چقدر مانده؟</h2>
-      <div class="countdown-grid" id="countdown">
-        <div><strong data-unit="days">۰</strong><span>روز</span></div>
-        <div><strong data-unit="hours">۰</strong><span>ساعت</span></div>
-        <div><strong data-unit="minutes">۰</strong><span>دقیقه</span></div>
-        <div><strong data-unit="seconds">۰</strong><span>ثانیه</span></div>
-      </div>
-    </section>
-
-    <section class="gallery section" id="gallery">
-      <p class="eyebrow">چند قاب از ما</p>
-      <h2>گالری خاطره‌ها</h2>
-      <div class="gallery-grid">
-        <figure class="tall"><img src="assets/standing.jpg" alt="نگار و حسین در مراسم" loading="lazy"></figure>
-        <figure><img src="assets/car-selfie.jpg" alt="نگار و حسین در خودرو" loading="lazy"></figure>
-        <figure><img src="assets/seated.jpg" alt="پرتره نگار و حسین" loading="lazy"></figure>
-      </div>
-    </section>
-
-    <section class="location section" id="location">
-      <div class="tile" aria-hidden="true">⌖</div>
-      <p class="eyebrow">میزبان شما هستیم در</p>
-      <h2>باغ تالار قصر لنا</h2>
-      <p>برای باز کردن مسیر، روی دکمه زیر بزنید.</p>
-      <a class="primary" href="https://nshn.ir/2erbvksDPxtXQM" target="_blank" rel="noopener">مسیریابی با نشان</a>
-    </section>
-
-    <section class="rsvp section" id="rsvp">
-      <p class="eyebrow">لطفاً حضور خود را اعلام کنید</p>
-      <h2>در جشن ما حضور دارید؟</h2>
-      <p id="rsvp-capacity"></p>
-      <form id="rsvp-form" action="https://formspree.io/f/mzezrgra" method="post">
-        <input type="hidden" name="_subject" value="پاسخ کارت عروسی نگار و حسین">
-        <input type="hidden" name="guest_id" id="guest-id" value="general">
-        <label>نام و نام خانوادگی<input name="name" id="rsvp-name" autocomplete="name" required></label>
-        <fieldset>
-          <legend>پاسخ شما</legend>
-          <label class="choice"><input type="radio" name="attendance" value="yes" required><span>با افتخار می‌آیم</span></label>
-          <label class="choice"><input type="radio" name="attendance" value="no" required><span>متأسفانه نمی‌رسم</span></label>
-        </fieldset>
-        <div id="attendance-details" hidden><label>تعداد کل افرادی که می‌آیند، با احتساب خودتان<select name="count" id="confirmed-count" required disabled></select></label><div id="extra-guests"></div></div>
-        <label>پیام برای نگار و حسین <textarea name="message" rows="3" maxlength="500" placeholder="اختیاری"></textarea></label>
-        <label class="honey" aria-hidden="true">این قسمت را خالی بگذارید<input name="_gotcha" tabindex="-1" autocomplete="off"></label>
-        <button class="primary" type="submit">ثبت پاسخ</button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
-
-  <footer><div class="seal small" aria-hidden="true"><span>ن</span><i>و</i><span>ح</span></div><p>مهر ۱۴۰۵ · آغاز همیشه ما</p></footer>
-  </div>
-  <button class="music-control paused" id="music-control" type="button" aria-label="پخش موسیقی" aria-pressed="false"><span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span><span id="music-label">پخش موسیقی</span></button>
-  <audio id="music" loop autoplay preload="auto"><source src="assets/shodi-nooram.mp3" type="audio/mpeg"></audio>
-  <noscript><p>برای باز کردن کارت و ثبت حضور، جاوااسکریپت مرورگر را فعال کنید. جشن نگار و حسین، ۲۲ مهر ۱۴۰۵، ساعت ۱۹، باغ تالار قصر لنا.</p></noscript>
-  <script src="guest.js?v=3"></script>
-  <script src="app.js?v=3"></script>
-</body>
-</html>
+<body class="gate-open">
+<section class="cover" id="gate" aria-label="کاور دعوت‌نامه نگار و حسین">
+<img class="cover-photo" src="assets/cover.png" width="941" height="1672" fetchpriority="high" alt="نگار و حسین در میان گل‌های سفید و صورتی و پرندگان سفید؛ آغاز زندگی مشترک با عشق و توکل به خدا">
+<div class="sr-only"><h1>به نام خداوند عشق</h1><p>خدایا، به برکت نام اعظمت، با مدد از مولایمان حضرت علی علیه‌السلام و با توسل به امام رئوف، سلطان علی بن موسی الرضا علیه‌السلام، نخستین گام‌های زندگی مشترکمان را با عشق، امید و توکل به تو برمی‌داریم.</p></div>
+<button id="enter-button" class="heart-button" type="button"><span>همراه ما شوید</span><span class="button-heart" aria-hidden="true">♡</span></button>
+<div class="gate-flight" aria-hidden="true"><span class="bird bird-one"><i></i></span><span class="bird bird-two"><i></i></span></div>
+</section>
+<div id="card" hidden>
+<div class="garden-background" aria-hidden="true"></div>
+<div class="sky" aria-hidden="true"><span class="bird bird-one"><i></i></span><span class="bird bird-two"><i></i></span></div>
+<main>
+<section class="scene opening" id="welcome"><div class="floral-frame"><div class="focus-content">
+<p class="eyebrow">به نام خدایی که عشق را آفرید</p>
+<p class="dedication">با مهر، برای</p><p class="guest-name" id="hero-guest">مهمان گرامی</p><p class="capacity" id="invited-label"></p>
+<h1 class="couple-title" tabindex="-1">نگار <span>و</span> حسین</h1>
+<div class="fine-rule" aria-hidden="true"><span>♡</span></div>
+<p class="opening-line">از میان تمام اتفاق‌های جهان،<br>ما به یکدیگر رسیدیم…</p>
+<p class="opening-note">و حالا، آغاز «همیشه»‌مان را<br>با حضور شما جشن می‌گیریم.</p>
+<p class="date-line">چهارشنبه، ۲۲ مهر ۱۴۰۵</p>
+<p class="scroll-hint">آرام ورق بزنید <span aria-hidden="true">↓</span></p>
+</div></div></section>
+<section class="scene letter" id="invitation"><div class="floral-frame"><div class="focus-content">
+<p class="eyebrow">نامه‌ای به عزیزترین‌هایمان</p><h2>شما، قشنگیِ این شبید</h2>
+<p>بعضی لحظه‌ها را نمی‌شود تنها جشن گرفت؛ باید عزیزترین آدم‌های زندگی کنارمان باشند، لبخند بزنند و شادی‌مان را با ما قسمت کنند.</p>
+<p>ما، نگار و حسین، پس از روزهای شیرینِ همراهی، به آغاز خانه‌ای رسیده‌ایم که قرار است با عشق، صبوری و دلگرمی ساخته شود.</p>
+<p>با مهر دعوتتان می‌کنیم در شب پیوندمان کنار ما باشید؛ تا اولین خاطرهٔ زندگی مشترکمان، به حضور گرم شما روشن شود.</p>
+<p class="calligraphy closing-line">جای شما، کنار دلِ ماست</p>
+</div></div></section>
+<section class="scene ceremony" id="schedule"><div class="floral-frame"><div class="focus-content">
+<p class="eyebrow">قرارِ عاشقانهٔ ما</p><h2>شبی برای همیشه</h2><p class="date-line">چهارشنبه، ۲۲ مهر ۱۴۰۵</p>
+<div class="timeline" id="timeline"></div>
+<div class="fine-rule" aria-hidden="true"><span>✦</span></div>
+<p class="hospitality">به صرف شیرینی، شام و خاطره‌های شیرین</p>
+<p class="afterparty">از ساعت ۲۲:۳۰، پس از شام، جشن‌مان در جمع صمیمی خانواده‌ها ادامه دارد؛ خانم‌ها و آقایان در کنار هم، با موسیقی، رقص و پایکوبی، تا سپیده‌دم این شب را به خاطره می‌سپاریم.</p>
+</div></div></section>
+<section class="scene countdown-scene" aria-labelledby="countdown-title"><div class="floral-frame"><div class="focus-content">
+<p class="eyebrow">هر لحظه، نزدیک‌تر به شما</p><h2 id="countdown-title">تا شبِ یکی شدن</h2>
+<p>روزها را می‌شماریم تا در کنار شما،<br>به زیباترین «بله» زندگی‌مان برسیم.</p>
+<div class="countdown-grid" aria-label="زمان باقی‌مانده تا مراسم"><div><strong data-unit="days">۰</strong><span>روز</span></div><div><strong data-unit="hours">۰</strong><span>ساعت</span></div><div><strong data-unit="minutes">۰</strong><span>دقیقه</span></div><div><strong data-unit="seconds">۰</strong><span>ثانیه</span></div></div>
+<p class="calligraphy closing-line">چه خوش باشد این دیدار…</p>
+</div></div></section>
+<section class="scene location-scene" id="location"><div class="floral-frame"><div class="focus-content">
+<p class="eyebrow">نشانیِ یک شب به‌یادماندنی</p><h2>قرارمان در باغ</h2>
+<div class="venue-name">باغ تالار قصر لنا</div>
+<p>در میان روشنایی باغ و عطر گل‌ها،<br>چشم‌به‌راه قدم‌های پرمهرتان هستیم.</p>
+<p>مسیر را باز کنید و به جشن ما بیایید؛<br>ادامهٔ این خاطره، با حضور شما زیباتر است.</p>
+<a class="gold-button map-button" href="https://nshn.ir/2erbvksDPxtXQM" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">⌖</span> مسیر باغ در نشان</a>
+</div></div></section>
+<section class="scene rsvp-scene" id="rsvp"><div class="floral-frame"><div class="focus-content">
+<p class="eyebrow">چشم‌به‌راه پاسخ شما هستیم</p><h2>کنارمان خواهید بود؟</h2>
+<p>برای اینکه با خیال آسوده و دلِ خوش میزبانتان باشیم، همین‌جا از آمدنتان برایمان بگویید.</p><p class="capacity" id="rsvp-capacity"></p>
+<form id="rsvp-form" action="https://formspree.io/f/mzezrgra" method="post">
+<input type="hidden" name="_subject" value="پاسخ کارت عروسی نگار و حسین"><input type="hidden" name="guest_id" id="guest-id">
+<label for="rsvp-name">نام و نام خانوادگی شما</label><input name="name" id="rsvp-name" autocomplete="name" maxlength="160" required placeholder="نام عزیز شما">
+<fieldset class="attendance"><legend>در این شب کنار ما هستید؟</legend><label class="choice"><input type="radio" name="attendance" value="yes" required><span>با عشق، کنارتان هستیم</span></label><label class="choice"><input type="radio" name="attendance" value="no" required><span>از دور، به شادی‌تان دل می‌دهیم</span></label></fieldset>
+<div id="attendance-details" hidden><div id="count-field"><label for="confirmed-count">تعداد کل مهمان‌ها، با احتساب خودتان</label><select name="count" id="confirmed-count" required disabled></select></div><div id="extra-guests"></div></div>
+<label for="guest-message">چند کلمه از دل شما، برای دل ما <small>اختیاری</small></label><textarea id="guest-message" name="message" rows="4" maxlength="1000" placeholder="آرزو، دعای خیر یا یادگاریِ مهربان شما…"></textarea>
+<div class="honey" aria-hidden="true"><label>این قسمت را خالی بگذارید<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+<button class="gold-button submit-button" type="submit">ثبت پاسخ با مهر <span aria-hidden="true">♡</span></button><p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+</form>
+<p class="farewell">خوشبختی، وقتی با عزیزانمان قسمت شود،<br>زیباتر است.</p><p class="calligraphy signature">با عشق، نگار و حسین</p>
+</div></div></section>
+</main>
+<footer><p>۲۲ مهر ۱۴۰۵ <span aria-hidden="true">♡</span> آغازِ همیشهٔ ما</p></footer>
+</div>
+<button class="music-control paused" id="music-control" type="button" aria-label="پخش موسیقی" aria-pressed="false"><span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span><span id="music-label">پخش موسیقی</span></button>
+<audio id="music" loop autoplay preload="auto"><source src="assets/shodi-nooram.mp3" type="audio/mpeg"></audio>
+<noscript><style>#gate{display:none!important}#card[hidden]{display:block!important}body{overflow:auto!important}.sky{display:none}</style><p>برای ثبت پاسخ، جاوااسکریپت مرورگر را فعال کنید.</p></noscript>
+<script src="guest.js?v=5"></script><script src="wedding.js?v=5"></script>
+</body></html>
