@@ -42,3 +42,6 @@ body{font-family:Sahel,Tahoma,sans-serif;color:#4e3c34;background:#faf5e9;line-h
 @media(min-width:760px){.floral-frame{width:min(760px,100%);padding:170px 110px 210px;min-height:960px}.rsvp-scene .floral-frame{padding:170px 110px 210px}.garden-art{z-index:-1}.scene{padding:25px 0}.rose-a{left:6px}.rose-b{right:6px}.chapter-bird-0{left:12px}.chapter-bird-1{right:12px}.map-preview{height:340px}}
 @media(max-width:370px){.floral-frame{padding:145px 12% 170px}.rsvp-scene .floral-frame{padding:145px 12% 175px}.couple-title{font-size:43px}.opening .eyebrow{font-size:20px}.focus-content h2{font-size:29px}.opening-line{font-size:23px}.choice{font-size:14px}.map-preview{height:260px}.bouquet{width:145px}.pearl-a{left:26px}.pearl-b{right:24px}.gold-outline{inset-inline:13px}.dancing-couple,.tango-sprite{width:110px;height:110px}}
 @media(prefers-reduced-motion:reduce){.garden-art *,.chapter-bird,.tango-sprite{animation:none!important}.rose-bud{opacity:0}.rose-bloom{opacity:1;transform:none}.chapter-bird{translate:none!important}.dancing-couple{transition:none!important}}
+
+/* Keep corner bouquets outside the reading column at every viewport. */
+.bouquet{width:clamp(145px,42vw,220px);transform-origin:50% 50%}.corner-a{left:-52px;top:-45px}.corner-b{right:-58px;top:-48px}.corner-c{left:-62px;bottom:-45px}.corner-d{right:-58px;bottom:-50px}
