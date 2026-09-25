@@ -94,3 +94,13 @@ body{font-family:Naskh,Tahoma,serif;font-size:19px;line-height:2.05;color:#624a3
 @media(min-width:760px){.garland-flower{width:calc(var(--petal-size) * 1.4)}.garland-left{left:calc(63px - var(--petal-size) * 1.4)}.garland-right{right:calc(63px - var(--petal-size) * 1.4)}.garland-crown{width:110px;--crown-x:30%}.crown-top{top:-40px}.crown-bottom{bottom:-40px}}
 @media(max-width:370px){.garland-left{left:calc(31px - var(--petal-size))}.garland-right{right:calc(31px - var(--petal-size))}.garland-crown{width:73px}}
 @media(prefers-reduced-motion:reduce){.garland-flower,.garland-crown{animation:none!important;rotate:var(--petal-turn,0deg)}}
+
+/* V9: equal name columns keep the conjunction at the true center. */
+.couple-title{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);grid-template-rows:auto auto;column-gap:4px;row-gap:0;align-items:center;justify-items:center;margin:18px 0 10px;padding:0 0 12px;direction:rtl;line-height:2.5}
+.couple-title .first-name{font-family:Nastaliq,serif;font-size:clamp(35px,10.3vw,62px);font-weight:400;line-height:2.65;margin:0;color:#80592d;white-space:nowrap}
+.couple-title .bride-name{grid-column:1;grid-row:1}.couple-title .groom-name{grid-column:3;grid-row:1}
+.couple-title .couple-and{grid-column:2;grid-row:1;font-family:Naskh,serif;font-size:27px;line-height:1;margin:0;color:#b18b53;align-self:center;translate:0 9px}
+.couple-title .surname{font-family:Naskh,serif;font-size:21px;line-height:1.8;margin:-5px 0 0;color:#94725e;font-weight:400;letter-spacing:0}
+.couple-title .bride-surname{grid-column:1;grid-row:2}.couple-title .groom-surname{grid-column:3;grid-row:2}
+@media(max-width:370px){.couple-title{grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr);column-gap:2px}.couple-title .first-name{font-size:32px}.couple-title .surname{font-size:19px}.couple-title .couple-and{font-size:23px}}
+@media(min-width:760px){.couple-title .first-name{font-size:65px}.couple-title .surname{font-size:25px}.couple-title .couple-and{font-size:34px}}
