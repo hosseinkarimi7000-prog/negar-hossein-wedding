@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f6eedf"><meta name="referrer" content="no-referrer"><meta name="description" content="به جشن آغاز زندگی مشترک نگار و حسین دعوتید؛ چهارشنبه ۲۲ مهر ۱۴۰۵، باغ تالار قصر لِنا."><title>دعوت‌نامهٔ عاشقانهٔ نگار و حسین</title>
 <link rel="preload" href="assets/NotoNaskh.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="assets/NotoNastaliq.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="wedding.css?v=9">
-<link rel="stylesheet" href="cover-motion.css?v=10c"><link rel="stylesheet" href="aqd.css?v=13"></head>
+<link rel="stylesheet" href="cover-motion.css?v=10c"><link rel="stylesheet" href="aqd.css?v=13"><link rel="stylesheet" href="navigation-cues.css?v=14"></head>
 <body class="gate-open">
 <section class="cover" id="gate" aria-label="کاور دعوت‌نامه نگار و حسین">
 <img class="cover-photo" src="assets/cover.png" width="941" height="1672" fetchpriority="high" alt="نگار و حسین در میان گل‌های سفید و صورتی و پرندگان سفید؛ آغاز زندگی مشترک با عشق و توکل به خدا">
 <div class="sr-only"><h1>به نام خدایی که نگار رو آفرید</h1><p>خدایا، به برکت نام اعظمت، با مدد از مولایمان حضرت علی علیه‌السلام و با توسل به امام رئوف، سلطان علی بن موسی الرضا علیه‌السلام، نخستین گام‌های زندگی مشترکمان را با عشق، امید و توکل به تو برمی‌داریم.</p></div>
-<button id="enter-button" class="heart-button" type="button"><span>همراه ما شوید</span><span class="button-heart" aria-hidden="true">♡</span></button>
+<button id="enter-button" class="heart-button" type="button"><span class="entry-copy"><strong>لطفاً ضربه بزنید</strong><small>ورود به کارت دعوت</small></span><span class="button-heart" aria-hidden="true">♡</span></button>
 <div class="cover-shutter shutter-left" aria-hidden="true"><img src="assets/cover.png" alt=""><i class="portal-flowers"></i></div><div class="cover-shutter shutter-right" aria-hidden="true"><img src="assets/cover.png" alt=""><i class="portal-flowers"></i></div><div class="portal-glow" aria-hidden="true"></div><div class="gate-flight" aria-hidden="true"><span class="portal-bird portal-bird-a"></span><span class="portal-bird portal-bird-b"></span></div>
 </section>
 <div id="card" hidden>
 <div class="garden-background" aria-hidden="true"></div>
+<button id="scroll-guide" class="scroll-guide" type="button" data-next-chapter hidden><span>ادامهٔ کارت پایین‌تر است</span><strong>صفحه را پایین ببرید</strong><span class="guide-arrow" aria-hidden="true">↓</span></button>
 
 <main>
 <section class="scene opening" id="welcome"><div class="floral-frame"><div class="focus-content">
@@ -23,7 +24,7 @@
 <p class="opening-line">از میان تمام اتفاق‌های جهان،<br>ما به یکدیگر رسیدیم…</p>
 <p class="opening-note">و حالا، آغاز «همیشه»‌مان را<br>با حضور شما جشن می‌گیریم.</p>
 <p class="date-line">چهارشنبه، ۲۲ مهر ۱۴۰۵</p>
-<p class="scroll-hint">آرام ورق بزنید <span aria-hidden="true">↓</span></p>
+<button class="scroll-hint" type="button" data-next-chapter><strong>ادامهٔ کارت را ببینید</strong><span class="scroll-instruction">صفحه را پایین ببرید یا اینجا ضربه بزنید</span><span class="scroll-chevron" aria-hidden="true">⌄<br>⌄</span></button>
 </div></div></section>
 <section class="scene aqd-scene" id="aqd-invitation" aria-labelledby="aqd-title" hidden><div class="floral-frame"><div class="focus-content">
 <p class="eyebrow">دعوتی ویژه، برای عزیزانِ نزدیکِ دل</p>
@@ -87,5 +88,5 @@
 <audio id="cover-music" loop autoplay preload="auto"><source src="assets/cover-music-v8.mp3" type="audio/mpeg"></audio>
 <audio id="music" loop preload="metadata"><source src="assets/shodi-nooram.mp3" type="audio/mpeg"></audio>
 <noscript><style>#gate{display:none!important}#card[hidden]{display:block!important}body{overflow:auto!important}.sky{display:none}</style><p>برای ثبت پاسخ، جاوااسکریپت مرورگر را فعال کنید.</p></noscript>
-<script src="guest.js?v=6"></script><script src="wedding.js?v=13"></script><script src="garden.js?v=9"></script>
+<script src="guest.js?v=6"></script><script src="wedding.js?v=14"></script><script src="garden.js?v=9"></script>
 <script src="living-cover.js?v=10c"></script></body></html>
