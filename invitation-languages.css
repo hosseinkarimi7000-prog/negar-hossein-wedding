@@ -1,0 +1,13 @@
+.language-switch{display:flex;justify-content:center;gap:9px;width:max-content;max-width:100%;margin:20px auto 6px;padding:5px;border:1px solid #d4b783;border-radius:40px;background:#fffaf0ed;box-shadow:0 4px 18px #89663513;opacity:var(--language-opacity,1);transform:translateY(var(--language-rise,0px));transition:opacity .15s linear,transform .15s linear;position:relative;z-index:8}
+.language-switch button{min-width:80px;min-height:44px;padding:4px 17px;border:0;border-radius:30px;background:transparent;color:#775435;font:18px/1.7 Naskh,serif;transition:background .2s,color .2s}
+.language-switch button[aria-pressed=true]{background:linear-gradient(120deg,#b3884e,#92652f);color:#fffbed;box-shadow:0 3px 8px #80512d25}
+.language-switch.is-faded{pointer-events:none}
+#card[lang=sdh]{font-family:Naskh,Tahoma,serif}
+#card[lang=sdh] .eyebrow,#card[lang=sdh] .opening-line,#card[lang=sdh] .calligraphy,#card[lang=sdh] h2{font-family:Naskh,Tahoma,serif;font-weight:400;line-height:2.05}
+#card[lang=sdh] .opening .eyebrow{font-size:22px}
+#card[lang=sdh] .opening-line{font-size:26px}
+#card[lang=sdh] .focus-content h2{font-size:clamp(25px,7vw,37px)}
+#card[lang=sdh] .closing-line,#card[lang=sdh] .signature{font-size:26px}
+#card[lang=sdh] .letter p:not(.eyebrow):not(.closing-line){text-align:center;line-height:2.35}
+@media(max-width:370px){.language-switch{gap:4px}.language-switch button{min-width:70px;font-size:17px;padding-inline:13px}#card[lang=sdh] .opening .eyebrow{font-size:19px}#card[lang=sdh] .opening-line{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.language-switch{transition:none;transform:none}}
