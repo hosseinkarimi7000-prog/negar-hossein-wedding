@@ -1,0 +1,5 @@
+<!doctype html><html lang="fa" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>بررسی اتصال پاسخ‌ها</title><body><h1>بررسی اتصال پاسخ‌های عروسی</h1><p>آزمایش اتصال بدون تغییر دعوت‌های موجود.</p><button id="read">بررسی دسترسی گزارش</button><button id="invalid">آزمایش رد پاسخ ناقص</button><pre id="result" style="white-space:pre-wrap" role="status"></pre><script src="rsvp-connection.js?v=20"></script><script>
+const output=document.querySelector('#result');
+document.querySelector('#read').onclick=async()=>{output.textContent='در حال بررسی…';try{const r=await WeddingConnection.call('read');output.textContent='دسترسی مالک تأیید شد؛ تعداد پاسخ‌ها: '+r.responses.length;}catch(e){output.textContent=e.message;}};
+document.querySelector('#invalid').onclick=async()=>{output.textContent='در حال بررسی…';try{await WeddingConnection.call('submit',{});output.textContent='خطا: پاسخ ناقص پذیرفته شد';}catch(e){output.textContent=e.message;}};
+</script></body></html>
