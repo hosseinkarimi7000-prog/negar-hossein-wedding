@@ -6,7 +6,8 @@ const scenes=[...document.querySelectorAll('.scene')];
 const sprites=[];const assets={};let raf=0,started=false,last=0;
 for(const [key,url] of Object.entries({dove:'assets/dove-sprite.png',tango:'assets/tango-atlas-v6.png'})) {const img=new Image();img.src=url;assets[key]=img;}
 function canvas(type,parent,phase){const c=document.createElement('canvas');c.width=c.height=256;c.className=type+'-sprite';parent.append(c);sprites.push({c,ctx:c.getContext('2d'),type,phase,scene:parent.closest('.scene')});}
-for(const [index,scene] of scenes.entries()){
+for(const scene of scenes){
+ const index=scene.id==='welcome'?0:scene.id==='invitation'?1:scene.id==='schedule'?2:scene.classList.contains('countdown-scene')?3:scene.id==='location'?4:5;
  const frame=scene.querySelector('.floral-frame');
  const art=document.createElement('div');art.className='garden-art';art.setAttribute('aria-hidden','true');
  art.innerHTML='<span class="gold-outline"></span><span class="bouquet corner-a"></span><span class="bouquet corner-b"></span><span class="bouquet corner-c"></span><span class="bouquet corner-d"></span>'+
@@ -14,6 +15,14 @@ for(const [index,scene] of scenes.entries()){
  ['a','b','c','d'].map((s,i)=>`<span class="rose rose-${s}" style="--delay:${-i-index}s"><i class="rose-bud"></i><i class="rose-bloom"></i></span>`).join('')+
  ['a','b'].map((s,i)=>`<span class="pearl-chain pearl-${s}" style="--delay:${-index-i}s">${Array.from({length:13},(_,n)=>`<i style="--n:${n}"></i>`).join('')}</span>`).join('');
  for(let n=0;n<8;n++){const spray=document.createElement('span');spray.className='orchid-spray spray-'+(n%2);spray.style.setProperty('--edge-y',(17+Math.floor(n/2)*22)+'%');spray.style.setProperty('--delay',(-n-index)+'s');art.append(spray);}
+ // Additional garlands fill the gaps without moving any existing artwork.
+ const extra=document.createElement('div');extra.className='extra-garland';art.append(extra);
+ const populate=()=>{const height=frame.clientHeight;if(!height)return;const rows=Math.max(6,Math.ceil((height-160)/88));if(extra.dataset.rows===String(rows))return;extra.dataset.rows=String(rows);extra.replaceChildren();
+ for(let n=0;n<rows*2;n++){const side=n%2,row=Math.floor(n/2),flower=document.createElement('span');flower.className='garland-flower '+(side?'garland-right':'garland-left')+' flower-type-'+(row%3);
+ flower.style.cssText=`--flower-y:${95+row*((height-190)/Math.max(1,rows-1))}px;--petal-size:${90+(row%4)*5}px;--petal-turn:${(row%2?1:-1)*(6+row%3*4)}deg;--petal-sway:${[1.2,3.7,2,4.5][(row+side)%4]}deg;--petal-speed:${4.2+(row%5)*.7}s;--petal-delay:${-n*.63}s`;extra.append(flower);}
+ for(let n=0;n<8;n++){const bloom=document.createElement('span');bloom.className='garland-crown '+(n<4?'crown-top':'crown-bottom');bloom.style.cssText=`--crown-x:${20+(n%4)*20}%;--petal-delay:${-n*.7}s;--petal-sway:${1+n%3}deg`;extra.append(bloom);}
+ };
+ new ResizeObserver(populate).observe(frame);populate();
  frame.prepend(art);
  if([1,2,3,5].includes(index)){const motif=document.createElement('div');motif.className='chapter-motif motif-'+index;motif.setAttribute('aria-hidden','true');
  motif.innerHTML=index===3?'<span class="moon-jewel">☾</span><span class="orbit-heart">♡</span>':index===2?'<span class="butterfly-pair"></span>':'<span class="songbirds"></span><i class="song-note note-a">♪</i><i class="song-note note-b">♫</i>';

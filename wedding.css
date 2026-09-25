@@ -82,3 +82,15 @@ body{font-family:Naskh,Tahoma,serif;font-size:19px;line-height:2.05;color:#624a3
 
 /* Keep mirrored sprays in the edge gutter, and prevent entry scroll anchoring. */
 .orchid-spray{transform-origin:50% 50%}body.gate-open{min-height:100dvh;overflow-anchor:none}.cover.leaving:before{opacity:0;transition:opacity .5s}.cover-shutter img{inset:0}.songbirds{clip-path:polygon(0 0,89% 0,100% 60%,100% 100%,0 100%)}
+
+/* V8: preserve the existing arrangements and fill their edge gaps with living flowers. */
+.extra-garland{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.garland-flower{position:absolute;top:var(--flower-y);width:var(--petal-size);aspect-ratio:1;background:url('assets/romantic-atlas-v7.png') 0 0/200% 200% no-repeat;filter:drop-shadow(0 3px 3px #72513322);transform-origin:50% 50%;rotate:calc(var(--petal-turn) + var(--scroll-sway));animation:garland-sway var(--petal-speed) ease-in-out var(--petal-delay) infinite alternate}
+.garland-left{left:calc(39px - var(--petal-size))}.garland-right{right:calc(39px - var(--petal-size));scale:-1 1;background-position:100% 0}.flower-type-1{background-position:100% 0}.flower-type-2{background-image:url('assets/botanical-atlas-v6.png');background-position:0 0}
+.garland-crown{position:absolute;left:var(--crown-x);width:85px;aspect-ratio:1;translate:-50% 0;background:url('assets/romantic-atlas-v7.png') 100% 0/200% 200%;filter:drop-shadow(0 3px 3px #72513320);transform-origin:50% 50%;animation:garland-sway 6.8s ease-in-out var(--petal-delay) infinite alternate}.crown-top{top:-36px}.crown-bottom{bottom:-38px;scale:1 -1}
+.garden-art .bouquet:nth-of-type(2n){animation-duration:8.2s}.garden-art .rose:nth-of-type(2n){animation-duration:4.7s}.garden-art .leaf-sprig:nth-of-type(2n){animation-duration:6.3s}.garden-art .orchid-spray:nth-of-type(3n){animation-duration:8s}
+.garden-art .garland-flower,.garden-art .garland-crown{animation-play-state:paused}.garden-active .garland-flower,.garden-active .garland-crown{animation-play-state:running}
+@keyframes garland-sway{from{transform:rotate(calc(var(--petal-sway) * -1)) translateY(-1px)}to{transform:rotate(var(--petal-sway)) translateY(3px)}}
+@media(min-width:760px){.garland-flower{width:calc(var(--petal-size) * 1.4)}.garland-left{left:calc(63px - var(--petal-size) * 1.4)}.garland-right{right:calc(63px - var(--petal-size) * 1.4)}.garland-crown{width:110px;--crown-x:30%}.crown-top{top:-40px}.crown-bottom{bottom:-40px}}
+@media(max-width:370px){.garland-left{left:calc(31px - var(--petal-size))}.garland-right{right:calc(31px - var(--petal-size))}.garland-crown{width:73px}}
+@media(prefers-reduced-motion:reduce){.garland-flower,.garland-crown{animation:none!important;rotate:var(--petal-turn,0deg)}}
