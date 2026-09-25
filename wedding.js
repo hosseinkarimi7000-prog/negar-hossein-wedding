@@ -3,6 +3,7 @@
 const $=s=>document.querySelector(s),fa=n=>new Intl.NumberFormat('fa-IR').format(n);
 const params=new URLSearchParams(location.hash.startsWith('#invite=')?location.hash.slice(8):location.search);
 const invite=WeddingGuests.invitation(params),personal=!!invite.seats;
+const aqdSection=$('#aqd-invitation');if(aqdSection){if(invite.tier==='aqd')aqdSection.hidden=false;else aqdSection.remove();}
 if(!personal){try{invite.id=sessionStorage.getItem('wedding-general-id')||'general-'+crypto.randomUUID();sessionStorage.setItem('wedding-general-id',invite.id);}catch{invite.id='general-'+Date.now()+'-'+Math.random().toString(36).slice(2);}}
 $('#hero-guest').textContent=invite.name;$('#hero-guest').hidden=!personal;$('#invited-label').hidden=!personal;$('#guest-id').value=invite.id;$('#rsvp-name').value=invite.name==='مهمان گرامی'?'':invite.name;
 const capacity=personal?`این دعوت، با مهر برای ${fa(invite.seats)} نفر از شما عزیزان است.`:'';
