@@ -11,3 +11,4 @@
 @media(max-width:600px){.dashboard{margin-top:12px}.dashboard header{padding-bottom:12px}.dashboard h1{font-size:23px}.report-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.report-stat{padding:10px 9px}.report-stat strong{font-size:28px}.report-stat span{font-size:14px}.report-stat small{font-size:12px}.report-title h2{font-size:20px}.report-panel{padding:14px}.dashboard header nav{gap:10px}}
 
 .pending-invitation{background:#f9f3e7;border:1px solid #e2d2b8;border-radius:12px;padding:12px;margin:12px 0}.pending-invitation input{font-size:13px;text-align:left;margin:5px 0 10px}.pending-invitation .delete-invite{color:#943e36;border-color:#d9aaa0;background:#fff5f1}.pending-invitation .copy-feedback{display:block;margin-top:8px}
+.quick-search .report-filters{margin:8px 0 12px}.quick-search h2,#report-details h2{margin:0}.quick-search a{display:inline-block;margin-top:2px}#report-details .response-card:first-child{margin-top:18px}
