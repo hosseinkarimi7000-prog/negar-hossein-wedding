@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>آزمایش اعلان گوشی | نگار و حسین</title>
+<style>@font-face{font-family:Naskh;src:url('assets/NotoNaskh.ttf')}*{box-sizing:border-box}body{margin:0;background:#f6f0e4;color:#403729;font-family:Naskh,serif;padding:28px 18px}main{max-width:640px;margin:auto;background:#fffdf6;border:1px solid #bba77c;border-radius:24px;padding:26px}h1{font-size:26px}button{font:inherit;background:#967344;color:white;border:0;border-radius:14px;padding:14px 20px;width:100%;margin:10px 0}button:disabled{opacity:.5}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:15px Naskh,serif;line-height:2;background:#f5eedf;padding:16px;border-radius:12px}a{color:#705126}</style>
+<main><h1>آزمایش اعلان روی همین گوشی</h1><p>این آزمایش پیام را مستقیماً روی گوشی نمایش می‌دهد و هیچ پیامی برای مهمان‌ها نمی‌فرستد. کارت را حذف یا تنظیمات مرورگر را پاک نکنید.</p><button id="check">بررسی وضعیت همین مرورگر</button><button id="test" disabled>نمایش اعلان آزمایشی روی گوشی</button><pre id="result" role="status" aria-live="polite">در حال بررسی…</pre><p>پس از آزمایش، نوار اعلان‌ها را پایین بکشید و از نتیجهٔ این صفحه عکس بفرستید.</p><a href="./">بازگشت به کارت</a></main>
+<script>
+'use strict';
+const out=document.getElementById('result'),test=document.getElementById('test');let reg=null,lines=[];
+function show(extra=''){out.textContent=lines.join('\n')+(extra?'\n'+extra:'');}
+async function check(){lines=[];reg=null;test.disabled=true;try{
+lines.push('اتصال امن: '+(isSecureContext?'بله':'خیر'));
+lines.push('اجازه اعلان: '+(('Notification'in window)?Notification.permission:'پشتیبانی نمی‌شود'));
+lines.push('حالت نصب‌شده: '+(matchMedia('(display-mode: standalone)').matches?'بله':'خیر'));
+if(!('serviceWorker'in navigator))throw Error('مرورگر از دریافت پس‌زمینه پشتیبانی نمی‌کند.');
+reg=await navigator.serviceWorker.getRegistration(new URL('./',location.href).href);
+if(!reg){lines.push('دریافت‌کننده اعلان: ثبت نشده؛ ابتدا اعلان را در کارت اختصاصی فعال کنید.');show();return;}
+lines.push('دریافت‌کننده: '+(reg.active?'فعال':'هنوز فعال نشده'));
+lines.push('فایل دریافت‌کننده: '+(reg.active?new URL(reg.active.scriptURL).pathname:'—'));
+const sub=await reg.pushManager.getSubscription();lines.push('اشتراک پوش: '+(sub?'ثبت شده':'ثبت نشده'));
+if(sub){const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(sub.endpoint));lines.push('شناسه دستگاه: '+Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('').slice(0,12));}
+test.disabled=!reg.active||Notification.permission!=='granted';show();
+}catch(e){show('خطای بررسی: '+e.message);}}
+document.getElementById('check').addEventListener('click',check);
+test.addEventListener('click',async()=>{test.disabled=true;try{await reg.showNotification('آزمایش مستقیم اعلان گوشی 🤍',{body:'این اعلان مستقیماً روی گوشی ساخته شد؛ مسیر نمایش اعلان کار می‌کند.',icon:new URL('notification-icon-192.png',location.href).href,tag:'local-check-'+Date.now(),data:{url:new URL('./',location.href).href},renotify:true});const ns=await reg.getNotifications();show('ساخت اعلان: موفق\nاعلان‌های فعال قابل مشاهده برای مرورگر: '+ns.length+'\nوجود بنر را با چشم روی گوشی بررسی کنید؛ این نتیجه دریافت پوش از سرور را تأیید نمی‌کند.');}catch(e){show('خطای ساخت اعلان: '+e.name+' · '+e.message);}finally{test.disabled=false;}});
+check();
+</script></html>
